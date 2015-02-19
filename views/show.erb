@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+<a href="/artists/<%= @artist.id %>/edit">Edit <%= @artist.name %></a>
+
+<p>
+  <form action="/artists/<%= @artist.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete">
+  </form>
+</p>
+
+</body>
+</html>

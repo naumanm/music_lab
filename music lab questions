@@ -1,0 +1,59 @@
+mike_nauman
+
+Music Lab Questions
+
+1. What are some books that Martin Fowler has written?
+NoSQL Distilled, Refactoring, UML Distilled
+
+2. What's the difference between "active record" and "ActiveRecord"?
+active record is the M in MVC.  Its a pattern.  ActiveRecord is the implementation
+that connects database records to classes in Ruby.
+
+3. Is the "active record" pattern an ORM?
+Yes
+
+4. Why might we want to use an ORM in our code?
+Allows properties and relationships of objects in an app to be stored and retrenved from a database without writing SQL directly.
+
+5. What gem do we need to allow Sinatra to interact with ActiveRecord?
+We need the sinatra-activerecord gem
+
+6. What is `rake`?
+Rake is a commandline tool that allow us to create, modify, and delte a postgres database
+
+7. What is a database migration?
+Migration separates the schema and changes to the database.  One does not have to write SQL manually.  It also allows versioning of the database. 
+
+8. What command can we use to create a new ActiveRecord migration?
+rake db:migrate
+
+9. What command runs our existing migrations?
+Rake db:migrate
+
+10. What commands reverses a migration?
+rake bd:rollback
+
+11. What command tells us which migrations have run and which have
+not?
+rake db:migrate:status
+
+12. Which class do we have to extend if we want to create a new model?
+ActiveRecord::Base
+
+13. What's the difference between ActiveRecord's `.new` and `.create`
+methods?
+.new creates a new object, create also creates a new object and tried to add it to the database.
+
+14. What's the difference between ActiveRecord's `.find` and
+`.find_by` methods?
+.find retreives a row by ID.  .find_by is a helper which allows more control by using naming conventions.
+
+15. What's the difference between ActiveRecord's `.find_by` and
+`.where` methods?
+.where is more powerful than .find_by which allows more complex logic on when finding.
+
+16. What ActiveRecord method do we use to change a value in the
+database?
+
+17. What ActiveRecord method do we use to remove an item from the
+database?
